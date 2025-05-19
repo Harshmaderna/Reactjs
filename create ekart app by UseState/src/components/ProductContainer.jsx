@@ -14,7 +14,7 @@ const ProductContainer = () => {
           setLoading(true)
         const res = await fetch("https://fakestoreapi.com/products");
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         setListProduct(data);
       })();
       } catch (error) {
@@ -30,7 +30,7 @@ const ProductContainer = () => {
   }
   return (
     <>
-      <div className="btn">
+      <input className="search" type="text" />
         <button
           className="top-button"
           onClick={() => {
@@ -46,6 +46,7 @@ const ProductContainer = () => {
         >
           {toggle ? "All Product" : "Top Rated Product"}
         </button>
+        
         <button
           className="dark"
           onClick={() => {
@@ -54,7 +55,7 @@ const ProductContainer = () => {
         >
           {light ? "Light" : "Dark"}
         </button>
-      </div>
+     
       <div className="product-container">
         {listProduct.map((product) => {
           return <Product key={product.id} product={product} />;
