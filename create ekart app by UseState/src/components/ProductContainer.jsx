@@ -7,13 +7,14 @@ const ProductContainer = () => {
   const [toggle, setToggle] = useState(false);
   const [light, setLight] = useState(true);
   const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("")
   
     useEffect(() => {
       try {
         (async () => {
           setLoading(true)
         const res = await fetch("https://fakestoreapi.com/products");
-        const data = await res.json();
+        const data = await res.json(); 
         // console.log(data);
         setListProduct(data);
       })();
@@ -30,7 +31,11 @@ const ProductContainer = () => {
   }
   return (
     <>
-      <input className="search" type="text" />
+      <input className="search" type="text" placeholder="search any product" />
+      <button onClick={() => {
+         const data = input.value()
+         console.log(data)
+      }} className="search-btn">search</button>
         <button
           className="top-button"
           onClick={() => {

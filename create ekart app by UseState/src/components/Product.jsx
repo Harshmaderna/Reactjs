@@ -1,6 +1,8 @@
+import Skleton from "./Skleton";
+
 const Product = ({ product }) => {
 if(!product){
-  return <p>product data is not found</p>
+  return 
 }
   return (
     <div className="product">
