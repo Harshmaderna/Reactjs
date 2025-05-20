@@ -26,15 +26,14 @@ const ProductContainer = () => {
       
     }, []);
   
-  if (loading) {
+  if (listProduct.length === 0) {
     return <Skleton />;
   }
   return (
     <>
-      <input className="search" type="text" placeholder="search any product" />
+      <input value={search} onChange={(e) => setSearch(e.target.value)} className="search" type="text" placeholder="search any product" />
       <button onClick={() => {
-         const data = input.value()
-         console.log(data)
+        setSearch("")
       }} className="search-btn">search</button>
         <button
           className="top-button"
