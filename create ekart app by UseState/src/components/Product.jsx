@@ -1,5 +1,3 @@
-import Skleton from "./Skleton";
-
 const Product = ({ product }) => {
 if(!product){
   return 

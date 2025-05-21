@@ -4,6 +4,7 @@ import Product from "./Product";
 import Skleton from "./Skleton";
 const ProductContainer = () => {
   const [listProduct, setListProduct] = useState([]);
+  const [filterProduct, setFilterProduct] = useState([])
   const [toggle, setToggle] = useState(false);
   const [light, setLight] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -25,6 +26,7 @@ const ProductContainer = () => {
       }
       
     }, []);
+    console.log(search)
   
   if (listProduct.length === 0) {
     return <Skleton />;
@@ -33,6 +35,8 @@ const ProductContainer = () => {
     <>
       <input value={search} onChange={(e) => setSearch(e.target.value)} className="search" type="text" placeholder="search any product" />
       <button onClick={() => {
+        const filterData = listProduct.filter((pro) => pro?.title.toLowerCase().includes(search.toLowerCase()));
+        setFilterProduct(filterData)
         setSearch("")
       }} className="search-btn">search</button>
         <button
@@ -62,7 +66,7 @@ const ProductContainer = () => {
      
       <div className="product-container">
         {listProduct.map((product) => {
-          return <Product key={product.id} product={product} />;
+          return <Product key={product.id} product={product} />
         })}
       </div>
     </>
