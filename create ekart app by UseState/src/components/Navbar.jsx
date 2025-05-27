@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Video from "./Video"
 
 const Navbar = () => {
   return (
@@ -17,7 +18,9 @@ const Navbar = () => {
         <li>
          <Link className="linkes" to="/cart">Cart</Link>
         </li>
-        
+         <li>
+         <Link className="linkes" to="/video">video</Link>
+        </li>
       </ul>
     </div>
   )

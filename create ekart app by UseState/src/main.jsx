@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
@@ -10,6 +10,10 @@ import Cart from "./components/Cart.jsx";
 import Error from "./components/Error.jsx";
 import ProductContainer from "./components/ProductContainer.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
+import Video from "./components/Video.jsx";
+
+
+const video = lazy(() => import("./components/Video.jsx"))
 
 const appRouter = createBrowserRouter([
   {
@@ -41,6 +45,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/:productId",
         element: <ProductDetails />
+      },
+      {
+        path: "/video",
+        element: <Suspense fallback={'<h1>Loading...</h1>'}><Video/></Suspense>
       }
     ],
   },
