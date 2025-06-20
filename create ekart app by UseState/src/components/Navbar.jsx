@@ -4,7 +4,7 @@ import Video from "./Video"
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <h1>Logo</h1>
+      <h1 className="text-green-800 font-bold text-2xl px-5 mt-2">ShopEase</h1>
       <ul className='menu'>
         <li>
          <Link className="linkes" to="/men">Men</Link>

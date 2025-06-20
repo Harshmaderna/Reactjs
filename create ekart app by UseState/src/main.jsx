@@ -11,6 +11,8 @@ import Error from "./components/Error.jsx";
 import ProductContainer from "./components/ProductContainer.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
 import Video from "./components/Video.jsx";
+import Login from "./components/Login.jsx";
+import Signup from "./components/Signup.jsx";
 
 
 const video = lazy(() => import("./components/Video.jsx"))
@@ -41,6 +43,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/signup",
+        element: <Signup />,
       },
       {
         path: "/:productId",

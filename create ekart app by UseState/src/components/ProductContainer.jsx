@@ -10,7 +10,7 @@ const ProductContainer = () => {
   const [toggle, setToggle] = useState(false);
   const [light, setLight] = useState(true);
   const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(""); 
 
   // useEffect(() => {
   //   try {
