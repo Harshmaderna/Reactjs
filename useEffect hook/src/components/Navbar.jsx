@@ -7,7 +7,7 @@ const Navbar = ({color}) => {
     },[color])
   return (
     <div>
-      i ama navbar {color} hehhehe...
+      i am navbar {color} hehhehe...
     </div>
   )
 }
