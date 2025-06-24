@@ -33,10 +33,10 @@ const ProductContainer = () => {
   }
   return (
     <>
-      <input
+      <input 
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="search"
+        className="search p-1 ml-8 bg-gray-100 rounded-2xl px-2 border border-gray-200 outline-none"
         type="text"
         placeholder="search any product"
       />

@@ -23,7 +23,7 @@ const Signup = () => {
           className="flex flex-col gap-7 p-2 my-3 justify-center items-center"
         >
             <h3 className="text-white text-2xl">Signup</h3>
-          <input 
+          <input required
           onChange={handleChange}
           name="names"
           value={formdata.names}

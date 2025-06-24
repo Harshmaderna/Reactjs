@@ -18,6 +18,7 @@ const handleChange = (e) => {
 const handleLoginSubmit = (e) => {
     e.preventDefault()
     console.log(formData)
+    setFormData("")
 }
 
   return (

@@ -13,12 +13,11 @@
 
 .menu li {
   padding: 10px;
-  border: 2px solid grey;
   list-style: none;
   border-radius: 10px;
 }
 .menu li:hover {
-  background-color: black;
+  background-color: rgb(126, 117, 117);
   color: whitesmoke;
   cursor: pointer;
 }
@@ -81,10 +80,10 @@
   padding: 10px;
   border-radius: 10px;
 }
-.search{
+/* .search{
   padding: 8px;
   margin-left: 40px;
-}
+} */
 
 .search-btn{
   margin: 10px;
