@@ -14,8 +14,7 @@ import Video from "./components/Video.jsx";
 import Login from "./components/Login.jsx";
 import Signup from "./components/Signup.jsx";
 
-
-const video = lazy(() => import("./components/Video.jsx"))
+const video = lazy(() => import("./components/Video.jsx"));
 
 const appRouter = createBrowserRouter([
   {
@@ -26,7 +25,7 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <ProductContainer />
+        element: <ProductContainer />,
       },
       {
         path: "/men",
@@ -45,22 +44,26 @@ const appRouter = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: "/login",
-        element: <Login />,
-      },
-      {
         path: "/signup",
         element: <Signup />,
       },
       {
         path: "/:productId",
-        element: <ProductDetails />
+        element: <ProductDetails />,
       },
       {
         path: "/video",
-        element: <Suspense fallback={'<h1>Loading...</h1>'}><Video/></Suspense>
-      }
+        element: (
+          <Suspense fallback={"<h1>Loading...</h1>"}>
+            <Video />
+          </Suspense>
+        ),
+      },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 createRoot(document.getElementById("root")).render(
